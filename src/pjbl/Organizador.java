@@ -18,18 +18,16 @@ public class Organizador extends Pessoa {
 		fm.adicionarUsers();
 	}
 
-	public void filtrarUsuario(String nome, String data, int capacidade, String descricao) {
+	public boolean filtrarEvento(String nome, String data, int capacidade, String descricao) {
 		Evento palestrante = new Evento(nome, data, capacidade, descricao);
 
 		for (int i = 0; i < palestrante.palestrantes.size(); i++) {
 			if (palestrante.palestrantes.get(i).equals(super.nome)) {
-
-			}
-			else {
-				continue;
+				return true;
 			}
 		}
 
+		return false;
 	}
 	
 	private void criarEvento(String nome, String data, int capacidade, String descricao) {

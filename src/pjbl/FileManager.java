@@ -39,6 +39,14 @@ public class FileManager {
 		eventos[0][3] = capacidade;
 		eventos[0][4] = descricao;
 	}
+
+	public boolean verificarEvento(String nome, String data, String capacidade, String descricao) {
+		if (eventos[0][1].equals(nome) && eventos[0][2].equals(data) && eventos[0][3].equals(capacidade) && eventos[0][4].equals(descricao)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 //	public void modificarEvento(String nomeEvento, String nome, String data, String capacidade, String descricao) {
 //		File file = new File(caminhoArquivo);

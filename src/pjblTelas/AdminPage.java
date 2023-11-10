@@ -1,5 +1,9 @@
 package pjblTelas;
 
+import pjbl.FileManager;
+
+import pjbl.Evento;
+
 import javax.swing.*;
 
 public class AdminPage extends JFrame {
@@ -9,10 +13,22 @@ public class AdminPage extends JFrame {
         String[] itens = {"Ver dados", "Ver eventos criados", "Criar Eventos"};
         Object opcao = JOptionPane.showInputDialog(null, "Escolha uma opção", "Organizador", JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
 
+        FileManager fm = new FileManager("./database/eventos.csv");
+
+        AdminLogin login = new AdminLogin();
+
+        String usuario = login.getName();
+        String email = login.getName();
+        String senha = login.getName();
+
+        AdminFilter filter = new AdminFilter(usuario, email, senha);
+
         System.out.println(opcao);
 
         if (opcao != null && opcao.equals(itens[0])) {
             JOptionPane.showMessageDialog(null, "'Ver dados' selecionado");
+
+
         }
         else if (opcao != null && opcao.equals(itens[1])) {
             JOptionPane.showMessageDialog(null, "'Ver eventos criados' selecionado");

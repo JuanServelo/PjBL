@@ -16,7 +16,7 @@ public class AdminLogin extends JFrame {
 
 		AdminFilter filter = new AdminFilter(usuario, email, senha);
 
-		if (usuario != null && senha != null && email != null && filter.filtrar(usuario, email, senha)){
+		if (usuario != null && senha != null && email != null && filter.filtrarUsuario(usuario, email, senha)){
 			JOptionPane.showMessageDialog(null, "login autorizado");
 		}
 		else {
