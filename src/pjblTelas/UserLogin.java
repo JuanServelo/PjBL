@@ -13,8 +13,11 @@ public class UserLogin extends JFrame{
 		String usuario = JOptionPane.showInputDialog(null, "Usuário");
 		String email = JOptionPane.showInputDialog(null, "E-mail");
 		String senha = JOptionPane.showInputDialog(null, "Senha");
+
 		System.out.println(usuario);
+		System.out.println(email);
 		System.out.println(senha);
+
 		if (usuario != null && senha != null && usuario.equals("pucpr") && senha.equals("poo")){
 			JOptionPane.showMessageDialog(null, "login autorizado");
 		}
