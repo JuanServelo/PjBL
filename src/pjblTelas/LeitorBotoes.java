@@ -12,12 +12,10 @@ public class LeitorBotoes implements ActionListener {
 		JOptionPane.showMessageDialog(origem, origem.getText() + " foi apertado");
 		
 		if(origem.getText() == "Participante") {
-			TelaInicial.userLogin();
 			TelaInicial.userPage();
 		}
 		
 		if(origem.getText() == "Organizador") {
-			TelaInicial.adminLogin();
 			TelaInicial.adminPage();
 		}
 		

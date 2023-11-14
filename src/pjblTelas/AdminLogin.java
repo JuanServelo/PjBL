@@ -5,10 +5,14 @@ import javax.swing.*;
 public class AdminLogin extends JFrame {
 	private static final long serialVersionUID = 1L;
 
+	public String usuario;
+	public String email;
+	public String senha;
+
 	public AdminLogin() {
-		String usuario = JOptionPane.showInputDialog(null, "Usuário");
-		String email = JOptionPane.showInputDialog(null, "E-mail");
-		String senha = JOptionPane.showInputDialog(null, "Senha");
+		usuario = JOptionPane.showInputDialog(null, "Usuário");
+		email = JOptionPane.showInputDialog(null, "E-mail");
+		senha = JOptionPane.showInputDialog(null, "Senha");
 
 		System.out.println(usuario);
 		System.out.println(email);

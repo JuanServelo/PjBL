@@ -7,16 +7,18 @@ import javax.swing.*;
 public class UserPage extends JFrame {
     private static final long serialVersionUID = 1L;
 
-    public UserPage() {
+    public UserPage(String nome, String email, String senha) {
         String[] itens = {"Ver dados", "Ver eventos", "Se inscrever"};
         Object opcao = JOptionPane.showInputDialog(null, "Escolha uma opção", "Usuário", JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
-
-        FileManager evento = new FileManager("./database/users.csv");
 
         System.out.println(opcao);
 
         if (opcao != null && opcao.equals(itens[0])) {
             JOptionPane.showMessageDialog(null, "'Ver dados' selecionado");
+
+            JOptionPane.showMessageDialog(null, nome, "Nome", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, email, "E-mail", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, senha, "Senha", JOptionPane.INFORMATION_MESSAGE);
         }
         else if (opcao != null && opcao.equals(itens[1])) {
             JOptionPane.showMessageDialog(null, "'Ver eventos' selecionado");

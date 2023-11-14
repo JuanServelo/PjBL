@@ -11,29 +11,31 @@ public class TelaInicial {
 		frame.setVisible(true);
 	}
 	
-	public static void userLogin() {
-		UserLogin frame = new UserLogin();
-		frame.setSize(300, 150);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-	}
+//	public static void userLogin() {
+//		UserLogin frame = new UserLogin();
+//		frame.setSize(300, 150);
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setVisible(true);
+//	}
 
 	public static void userPage() {
-		UserPage frame = new UserPage();
+		UserLogin login = new UserLogin();
+		UserPage frame = new UserPage(login.usuario, login.email, login.senha);
 		frame.setSize(300, 150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
 
-	public static void adminLogin() {
-		AdminLogin frame = new AdminLogin();
-		frame.setSize(300, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-	}
+//	public static void adminLogin() {
+//		AdminLogin frame = new AdminLogin();
+//		frame.setSize(300, 300);
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setVisible(true);
+//	}
 
 	public static void adminPage() {
-		AdminPage frame = new AdminPage();
+		AdminLogin login = new AdminLogin();
+		AdminPage frame = new AdminPage(login.usuario, login.email, login.senha);
 		frame.setSize(300, 150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);

@@ -9,24 +9,16 @@ import javax.swing.*;
 public class AdminPage extends JFrame {
     private static final long serialVersionUID = 1L;
 
-    public AdminPage() {
+    public AdminPage(String nome, String email, String senha) {
         String[] itens = {"Ver dados", "Ver eventos criados", "Criar Eventos"};
         Object opcao = JOptionPane.showInputDialog(null, "Escolha uma opção", "Organizador", JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
-
-        FileManager evento = new FileManager("./database/eventos.csv");
-
-        AdminLogin login = new AdminLogin();
-
-        String usuario = login.getName();
-        String email = login.getName();
-
-        System.out.println(opcao);
 
         if (opcao != null && opcao.equals(itens[0])) {
             JOptionPane.showMessageDialog(null, "'Ver dados' selecionado");
 
-            JOptionPane.showMessageDialog(null, usuario);
-            JOptionPane.showMessageDialog(null, email);
+            JOptionPane.showMessageDialog(null, nome, "Nome", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, email, "E-mail", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, senha, "Senha", JOptionPane.INFORMATION_MESSAGE);
         }
         else if (opcao != null && opcao.equals(itens[1])) {
             JOptionPane.showMessageDialog(null, "'Ver eventos criados' selecionado");
