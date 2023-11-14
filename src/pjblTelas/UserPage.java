@@ -1,5 +1,7 @@
 package pjblTelas;
 
+import pjbl.FileManager;
+
 import javax.swing.*;
 
 public class UserPage extends JFrame {
@@ -8,6 +10,8 @@ public class UserPage extends JFrame {
     public UserPage() {
         String[] itens = {"Ver dados", "Ver eventos", "Se inscrever"};
         Object opcao = JOptionPane.showInputDialog(null, "Escolha uma opção", "Usuário", JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
+
+        FileManager evento = new FileManager("./database/users.csv");
 
         System.out.println(opcao);
 

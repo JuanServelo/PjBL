@@ -6,7 +6,6 @@ import pjbl.Organizador;
 public class AdminFilter extends Organizador {
     public AdminFilter(String nome, String email, String senha) {
         super(nome, email, senha);
-        validadorSenha(senha);
 
         if (!filtrarUsuario(nome, email, senha)) {
             throw new IllegalArgumentException("Usuário não cadastrado!");

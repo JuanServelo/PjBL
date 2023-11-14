@@ -21,8 +21,8 @@ public class Usuario extends Pessoa{
 	public boolean filtrarEvento(String nome, String data, int capacidade, String descricao) {
 		Evento participante = new Evento(nome, data, capacidade, descricao);
 
-		for (int i = 0; i < participante.palestrantes.size(); i++) {
-			if (participante.palestrantes.get(i).equals(super.nome)) {
+		for (int i = 0; i < participante.participantes.size(); i++) {
+			if (participante.participantes.get(i).equals(super.nome)) {
 				return true;
 			}
 		}

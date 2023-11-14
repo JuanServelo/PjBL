@@ -18,7 +18,9 @@ public class UserLogin extends JFrame{
 		System.out.println(email);
 		System.out.println(senha);
 
-		if (usuario != null && senha != null && usuario.equals("pucpr") && senha.equals("poo")){
+		UserFilter filter = new UserFilter(usuario, email, senha);
+
+		if (usuario != null && senha != null && filter.filtrarUsuario(usuario, email, senha)){
 			JOptionPane.showMessageDialog(null, "login autorizado");
 		}
 		else{
