@@ -1,5 +1,7 @@
 package pjblTelas;
 
+import pjbl.Evento;
+
 import javax.swing.JFrame;
 
 public class TelaInicial {
@@ -19,8 +21,9 @@ public class TelaInicial {
 //	}
 
 	public static void userPage() {
+		Evento evento = new Evento("Evento", "20/20/2023", 20, "Testeteststetstetste stat sayuv asiveasnoneb");
 		UserLogin login = new UserLogin();
-		UserPage frame = new UserPage(login.usuario, login.email, login.senha);
+		UserPage frame = new UserPage(login.usuario, login.email, login.senha, evento.nome, evento.data, evento.capacidade, evento.descricao);
 		frame.setSize(300, 150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
@@ -34,8 +37,9 @@ public class TelaInicial {
 //	}
 
 	public static void adminPage() {
+		Evento evento = new Evento("Evento", "20/20/2023", 20, "Testeteststetstetste stat sayuv asiveasnoneb");
 		AdminLogin login = new AdminLogin();
-		AdminPage frame = new AdminPage(login.usuario, login.email, login.senha);
+		AdminPage frame = new AdminPage(login.usuario, login.email, login.senha, evento.nome, evento.data, evento.capacidade, evento.descricao);
 		frame.setSize(300, 150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);

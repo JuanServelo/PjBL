@@ -5,10 +5,10 @@ import java.util.Objects;
 
 public class Evento {
 	
-	private String nome;
-	private String data;
+	public String nome;
+	public String data;
 	public int capacidade;
-	private String descricao;
+	public String descricao;
 	public ArrayList<String> palestrantes = new ArrayList<>();
 	public ArrayList<String> participantes = new ArrayList<>();
 	private int idEvento = 0;
