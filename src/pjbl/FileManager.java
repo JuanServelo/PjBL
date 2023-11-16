@@ -49,31 +49,7 @@ public class FileManager {
 		}
 	}
 	
-//	public void modificarEvento(String nomeEvento, String nome, String data, String capacidade, String descricao) {
-//		File file = new File(caminhoArquivo);
-//		try {
-//			FileWriter fileWriter = new FileWriter(file, true);
-//			for(String[] valor : eventos) {
-//				StringBuilder line = new StringBuilder();
-//				// esse line está escrevendo tudo no arquivo csv
-//				for(int cont = 0; cont < valor.length; cont++) {
-//					if(valor[cont] == nomeEvento) {
-//						line.delete(0, 4);
-//					}
-//				}
-//				if(validador) {
-//					line.append("\n");
-//					fileWriter.append(line.toString());
-//				}
-//			}
-//			fileWriter.close();
-//			if(validador == false) {
-//				throw new ExecaoPersonalizada("Nenhum evento foi encontrado para exclusão!");
-//			}
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//		}
-//	}
+
 	
 	public void excluirEvento(String nomeEvento) {
 		File file = new File(caminhoArquivo);
