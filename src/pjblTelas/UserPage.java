@@ -1,8 +1,10 @@
 package pjblTelas;
 
 import pjbl.FileManager;
+import pjbl.Usuario;
 
 import javax.swing.*;
+import java.util.Scanner;
 
 public class UserPage extends JFrame {
     private static final long serialVersionUID = 1L;
@@ -37,6 +39,17 @@ public class UserPage extends JFrame {
         }
         else if (opcao != null && opcao.equals(itens[2])) {
             JOptionPane.showMessageDialog(null, "'Se inscrever' selecionado");
+
+            Usuario usuario = new Usuario(nome, email, senha);
+
+            String nomeDoEvento = JOptionPane.showInputDialog(null, "Digite o nome do evento que quer se inscrever: ");
+
+            if (nomeDoEvento.equals(nomeEvento)) {
+                usuario.seInscrever(nome, nomeEvento, data, capacidade, descricao);
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Evento não existe, tente novamente!");
+            }
         }
         else {
             JOptionPane.showMessageDialog(null, "Selecione uma opção válida");

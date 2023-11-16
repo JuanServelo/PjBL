@@ -30,9 +30,15 @@ public class Usuario extends Pessoa{
 		return false;
 	}
 	
-	public void seInscrever(String nome) {
+	public void seInscrever(String nome, String nomeEvento, String data, int capacidade, String descricao) {
+		Evento evento = new Evento(nomeEvento, data, capacidade, descricao);
+
+		FileManager fm = new FileManager(".database/eventos.csv");
+
 		try {
-			
+			if (evento.participantes.contains(nome) && !fm.verificarEvento(nomeEvento, data, capacidade, descricao)) {
+				evento.adicionarParticipante(nome);
+			}
 		}
 		
 		catch(Exception e) {

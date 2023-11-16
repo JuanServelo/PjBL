@@ -12,13 +12,6 @@ public class TelaInicial {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
-//	public static void userLogin() {
-//		UserLogin frame = new UserLogin();
-//		frame.setSize(300, 150);
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setVisible(true);
-//	}
 
 	public static void userPage() {
 		Evento evento = new Evento("Evento", "20/20/2023", 20, "Testeteststetstetste stat sayuv asiveasnoneb");
@@ -28,13 +21,6 @@ public class TelaInicial {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-
-//	public static void adminLogin() {
-//		AdminLogin frame = new AdminLogin();
-//		frame.setSize(300, 300);
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setVisible(true);
-//	}
 
 	public static void adminPage() {
 		Evento evento = new Evento("Evento", "20/20/2023", 20, "Testeteststetstetste stat sayuv asiveasnoneb");

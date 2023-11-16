@@ -2,6 +2,7 @@ package pjblTelas;
 
 import javax.swing.*;
 import pjbl.Usuario;
+
 public class CadastroUser extends JFrame {
     private static final long serialVersionUID = 1L;
 
@@ -24,10 +25,14 @@ public class CadastroUser extends JFrame {
         System.out.println(email);
         System.out.println(senha2);
 
-        if (nome != null && email != null && senha2 != null) {
-            Usuario usuario = new Usuario(nome, email, senha2);
+        try {
+            if (nome != null && email != null && senha2 != null) {
+                Usuario usuario = new Usuario(nome, email, senha2);
+
+                usuario.cadastrarUsuarios(nome, email, senha2);
+            }
         }
-        else {
+        catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Erro no cadastro!");
         }
     }

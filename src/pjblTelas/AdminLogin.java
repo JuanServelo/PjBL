@@ -20,11 +20,13 @@ public class AdminLogin extends JFrame {
 
 		AdminFilter filter = new AdminFilter(usuario, email, senha);
 
-		if (usuario != null && senha != null && email != null && filter.filtrarUsuario(usuario, email, senha)){
-			JOptionPane.showMessageDialog(null, "login autorizado");
+		try {
+			if (usuario != null && senha != null && email != null && filter.filtrarUsuario(usuario, email, senha)){
+				JOptionPane.showMessageDialog(null, "login autorizado");
+			}
 		}
-		else {
-			JOptionPane.showMessageDialog(null, "login recusado");
+		catch (Exception e) {
+			System.out.println("Login negado");
 		}
 	}
 }
