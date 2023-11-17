@@ -36,23 +36,27 @@ public class Usuario extends Pessoa{
 		FileManager fm = new FileManager(".database/eventos.csv");
 
 		try {
-			if (evento.participantes.contains(nome) && !fm.verificarEvento(nomeEvento, data, capacidade, descricao)) {
+			if (!evento.participantes.contains(nome) && !fm.verificarEvento(nomeEvento, data, capacidade, descricao)) {
 				evento.adicionarParticipante(nome);
 			}
 		}
-		
 		catch(Exception e) {
 			System.out.println("Não foi possivel se inscrever no evento selecionado");
 		}
 	}
 	
-	public void cancelarInscrição(int id) {
+	public void cancelarInscrição(String nome, String nomeEvento, String data, int capacidade, String descricao) {
+		Evento evento = new Evento(nomeEvento, data, capacidade, descricao);
+
+		FileManager fm = new FileManager("./database/eventos.csv");
+
 		try {
-			
+			if (evento.participantes.contains(nome) && fm.verificarEvento(nomeEvento, data, capacidade, descricao)) {
+				evento.excluirParticipantes(nome);
+			}
 		}
-		
 		catch(Exception e) {
-			System.out.println("Não foi possivel cancelar a inscrição neste evento!");
+			System.out.println("Não foi possivel se inscrever no evento selecionado");
 		}
 	}
 	

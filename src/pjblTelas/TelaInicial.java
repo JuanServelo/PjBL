@@ -22,6 +22,10 @@ public class TelaInicial {
 		frame.setVisible(true);
 	}
 
+	public static void userEvento() {
+
+	}
+
 	public static void adminPage() {
 		Evento evento = new Evento("Evento", "20/20/2023", 20, "Testeteststetstetste stat sayuv asiveasnoneb");
 		AdminLogin login = new AdminLogin();

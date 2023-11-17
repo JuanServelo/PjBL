@@ -35,14 +35,7 @@ public class AdminPage extends JFrame {
         else if (opcao != null && opcao.equals(itens[2])) {
             JOptionPane.showMessageDialog(null, "'Criar eventos' selecionado");
 
-            FileManager fm = new FileManager(".database/eventos.csv");
 
-            if (!fm.verificarEvento(nomeEvento, data, capacidade, descricao)) {
-                String strCapacidade = String.valueOf(capacidade);
-
-                fm.adicionarEventoLista(nomeEvento, data, strCapacidade, descricao);
-                fm.adicionarEvento();
-            }
         }
         else {
             JOptionPane.showMessageDialog(null, "Selecione uma opção válida");

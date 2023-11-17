@@ -41,7 +41,9 @@ public class FileManager {
 	}
 
 	public boolean verificarEvento(String nome, String data, int capacidade, String descricao) {
-		if (eventos[0][1].equals(nome) && eventos[0][2].equals(data) && eventos[0][3].equals(capacidade) && eventos[0][4].equals(descricao)) {
+		String strCapacidade = String.valueOf(capacidade);
+
+		if (eventos[0][1].equals(nome) && eventos[0][2].equals(data) && eventos[0][3].equals(strCapacidade) && eventos[0][4].equals(descricao)) {
 			return true;
 		}
 		else {
