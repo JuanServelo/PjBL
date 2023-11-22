@@ -30,6 +30,14 @@ public class LeitorBotoes implements ActionListener {
 		if (origem.getText() == "Admin") {
 			TelaInicial.cadastroAdmin();
 		}
+
+		if (origem.getText() == "Se Inscrever") {
+			TelaInicial.telaUserEvento();
+		}
+
+		if (origem.getText() == "Criar Eventos") {
+			TelaInicial.telaAdminEvento();
+		}
 	}
 	
 }

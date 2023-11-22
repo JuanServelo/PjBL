@@ -14,12 +14,15 @@ public class UserEvento extends JFrame {
         if (opcao != null && opcao.equals(itens[0])) {
             FileManager fm = new FileManager("./database/eventos.csv");
 
-            fm.verificarEvento(nomeEvento, data, capacidade, descricao);
-
-            JOptionPane.showMessageDialog(null, nomeEvento, "Nome do Evento", JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null, data, "Data do Evento", JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null, capacidade, "Capacidade do Evento", JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null, descricao, "Descrição do Evento", JOptionPane.INFORMATION_MESSAGE);
+            if (fm.verificarEvento(nomeEvento, data, capacidade, descricao)) {
+                JOptionPane.showMessageDialog(null, nomeEvento, "Nome do Evento", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, data, "Data do Evento", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, capacidade, "Capacidade do Evento", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, descricao, "Descrição do Evento", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Não existem informações sobre o evento!");
+            }
         }
         else if (opcao != null && opcao.equals(itens[1])) {
             Usuario usuario = new Usuario(nome, email, senha);

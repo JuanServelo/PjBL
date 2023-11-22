@@ -11,7 +11,7 @@ public class UserPage extends JFrame {
 
     public UserPage(String nome, String email, String senha, String nomeEvento, String data, int capacidade, String descricao) {
         String[] itens = {"Ver dados", "Ver eventos", "Se inscrever"};
-        Object opcao = JOptionPane.showInputDialog(null, "Escolha uma opção", "Usuário", JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
+        Object opcao = JOptionPane.showOptionDialog(null, "Escolha uma das opções", "Usuário", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
 
         System.out.println(opcao);
 

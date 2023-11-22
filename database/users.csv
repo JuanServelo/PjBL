@@ -24,3 +24,5 @@ ID,nome,e-mail,senha,tipo usuario
 1,Jorge,Teste,#Senha1,organizador
 1,Marina,Marina@marina,Marina@1,normal
 1,Marina,Marina@marina,Marina@1,normal
+1,Juan,Teste,#Teste2,normal
+1,Juan,Teste,#Teste2,normal

@@ -22,6 +22,13 @@ public class TelaInicial {
 		frame.setVisible(true);
 	}
 
+	public static void telaUserEvento() {
+		TelaUserEvento frame = new TelaUserEvento();
+		frame.setSize(300, 150);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+
 	public static void userEvento() {
 
 	}
@@ -33,6 +40,17 @@ public class TelaInicial {
 		frame.setSize(300, 150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+	}
+
+	public static void telaAdminEvento() {
+		TelaAdminEvento frame = new TelaAdminEvento();
+		frame.setSize(300, 150);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+
+	public static void adminEvento() {
+
 	}
 
 	public static void cadastro() {

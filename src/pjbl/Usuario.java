@@ -36,7 +36,7 @@ public class Usuario extends Pessoa{
 		FileManager fm = new FileManager(".database/eventos.csv");
 
 		try {
-			if (!evento.participantes.contains(nome) && !fm.verificarEvento(nomeEvento, data, capacidade, descricao)) {
+			if (!evento.participantes.contains(nome) && fm.verificarEvento(nomeEvento, data, capacidade, descricao)) {
 				evento.adicionarParticipante(nome);
 			}
 		}

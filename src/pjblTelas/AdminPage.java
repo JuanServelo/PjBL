@@ -7,7 +7,7 @@ public class AdminPage extends JFrame {
     private static final long serialVersionUID = 1L;
 
     public AdminPage(String nome, String email, String senha, String nomeEvento, String data, int capacidade, String descricao) {
-        String[] itens = {"Ver dados", "Ver eventos criados", "Criar Eventos"};
+        String[] itens = {"Ver dados dos eventos", "Ver eventos criados", "Criar Eventos"};
         Object opcao = JOptionPane.showInputDialog(null, "Escolha uma opção", "Organizador", JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
 
         if (opcao != null && opcao.equals(itens[0])) {
